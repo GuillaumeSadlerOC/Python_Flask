@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+
+    <div class="container-fluid">
+
+        <header class="row">
+
+            <div class="col-xs-3">
+                <img class="img-responsive" src="static/img/robotics.png" alt="Robot">
+            </div>
+            <div class="col-xs-9">
+                <h1>Grand Papy Bot</h1>
+            </div>
+
+        </header>
+
+        <div class="row" id="container-result">
+
+                <div id="maCarte" class="col-md-12">
+
+                </div>
+
+                <div id="chat" class="col-md-12">
+
+                </div>
+
+        </div>
+
+        <div class="row" id="container-form">
+
+            <div class="col-md-12 form">
+
+                <form id="formulaire" method="POST" action="/_query" class="input-group" role="form">
+
+                    <input type="text" id="userRequest" name="user_request" class="form-control">
+
+                    <div class="input-group-append">
+                        <button class="btn btn-dark" type="submit" name="submit">Rechercher</button>
+                    </div>
+                </form>
+
+            </div>
+
+            <div id="loading">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="row">
+            <div class="col-xs-4">
+                    <h3 class="name">Guillaume Sadler - </h3>
+            </div>
+            <div class="col-xs-8">
+                <a href="https://github.com/TheodoraxX/projet7" target="_blank" class="badge badge-light git_link">Dépot Git-Hub</a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+{% endblock %}
